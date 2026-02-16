@@ -4,8 +4,10 @@
 <h1>Subjects</h1>
 
 <ul>
-    <li>Math</li>
-    <li>Physics</li>
-    <li>Programming</li>
+    {% for subject in subjects %}
+        <li>{{ subject.name }}</li>
+    {% empty %}
+        <li>No subjects yet</li>
+    {% endfor %}
 </ul>
 {% endblock %}
